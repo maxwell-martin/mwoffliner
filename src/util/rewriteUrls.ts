@@ -119,7 +119,7 @@ function rewriteUrlNoArticleCheck(articleId: string, dump: Dump, linkNode: Domin
     }
   }
 
-  if (rel) {
+  if (rel && !linkNode.matches('a.mirror-link')) {
     // This is Parsoid HTML
 
     /* Add 'external' class to interwiki links */
