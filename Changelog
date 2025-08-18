@@ -16,6 +16,9 @@ Unreleased:
 * FIX: Fix wrong SVG content type (@Markus-Rost #2464)
 * FIX: Fix missing page titles on some mwIndexPhpPath values (@Markus-Rost #2468)
 * FIX: Set correct MimeType on ZIM Metadata (@Markus-Rost #2470)
+* CHANGED: Remove `mwWikiPath` and `mwIndexPhpPath` CLI parameter, use values from the API instead (@Markus-Rost #2422)
+* CHANGED: Build `mwRestApiPath` and `mwModulePath` CLI parameter default values from the API (@Markus-Rost #2422)
+* NEW: Add `langVariant` CLI parameter for language conversion (@Markus-Rost #2399)
 
 1.16.0:
 * CHANGED: ActionParse renderer is now the preferred one when available (@benoit74 #2183)
