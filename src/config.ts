@@ -104,8 +104,38 @@ const config = {
       ],
       js_simplified: [
         // base JS scripts always needed / never returned on API calls
-        'startup',
+        'jquery',
+        'mediawiki.base',
       ],
+      js_trusted: [
+        // JS modules and their dependencies trusted to not request any external resources
+        'jquery',
+        'mediawiki.base',
+        'jquery.tablesorter',
+        'jquery.makeCollapsible',
+        'mediawiki.page.ready',
+        'skins.minerva.scripts',
+        'mediawiki.page.gallery',
+        'ext.cite.ux-enhancements',
+        'ext.pygments.view',
+        'ext.Tabber',
+        'ext.tabberNeue',
+        'ext.tmh.player',
+        'ext.cargo.main',
+      ],
+      js_dynamic_dependencies: {
+        'mediawiki.page.ready': [
+          'jquery.tablesorter',
+          'jquery.makeCollapsible',
+        ],
+        'ext.tmh.player': [
+          'ext.tmh.player.inline',
+          'ext.tmh.player.dialog',
+        ],
+        'ext.cargo.main': [
+          'oojs-ui-core',
+        ],
+      }
     },
 
     // Output paths for storing stuff
@@ -134,6 +164,8 @@ const config = {
       subCategories: './templates/subcategories.html',
 
       subPages: './templates/subpages.html',
+
+      javaScript: './templates/javaScript.html',
 
       articleListHomeTemplate: './templates/article_list_home.html',
 
